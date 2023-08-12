@@ -5,8 +5,8 @@ from papers import *
 
 f = open('main.txt', mode='r')
 help = f.read()
-sim_h = open('sim_h', mode='r').read()
-arxiv_h = open('arxiv_h', mode='r').read()
+sim_h = open('sim_h.txt', mode='r').read()
+arxiv_h = open('arxiv_h.txt', mode='r').read()
 
 
 def handle_response(message) -> str:

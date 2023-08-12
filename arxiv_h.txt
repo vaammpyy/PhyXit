@@ -1,3 +1,3 @@
 I can get various research papers using:
-1. Keywords: `@SimIt arxiv top <keywords>`
-2. Paper-ID: `@SimIt arxiv fetch <paper-id>`
+1. Keywords: `@SimIt arxiv _top <keywords>_`
+2. Paper-ID: `@SimIt arxiv _fetch <paper-id>_`
