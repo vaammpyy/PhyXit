@@ -1,5 +1,8 @@
 import discord
+import os
 from simulate import *
+from papers import *
+
 f = open('main.txt', mode='r')
 help = f.read()
 
@@ -16,6 +19,10 @@ def handle_response(message) -> str:
         # except:
         #     continue
     if p_message[0] == 'sim':
+        try:
+            os.remove('movie.mp4')
+        except:
+            pass
         if p_message[1] == 'projectile':
             v = float(p_message[2])
             theta = float(p_message[3])
@@ -25,7 +32,23 @@ def handle_response(message) -> str:
             projectile_motion(v, theta, h, dt, t)
 
             
-
             return [['movie.mp4', "\n>>> "+help], 'm']
+    if p_message[0] == 'arxiv':
+        try:
+            os.remove('papers.log')
+        except:
+            pass
+        if p_message[1] == 'top':
+            query = ' '.join(p_message[2:])
+            getList(query)
+            paper = open('papers.log', mode='r')
+            lines = paper.read()
+            return [f"Top 10 papers related to **{query}**\n>>> "+lines, 't']
+        if p_message[1] == 'fetch':
+            fetchPaper(p_message[2])
+            paper = open('papers.log', mode='r')
+            lines = paper.read()
+            return [f"Details of paper: **{p_message[2]}**\n>>> "+lines, 't']
+
 
     return ["\n>>> "+help, 't']
