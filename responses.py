@@ -37,7 +37,14 @@ def handle_response(message) -> str:
                 data_vec = [float(x) for x in p_message[2:]]
             except:
                 return ["\n>>> "+sim_h, 't']
-            # pendulum function(*data_vec)
+            single_pendulum_motion(*data_vec)
+            return [['movie.mp4', "op.txt"], 'm']
+        if p_message[1] == 'spring':
+            try:
+                data_vec = [float(x) for x in p_message[2:]]
+            except:
+                return ["\n>>> "+sim_h, 't']
+            spring_block_motion(*data_vec)
             return [['movie.mp4', "op.txt"], 'm']
         return ["\n>>> "+sim_h, 't']
 
