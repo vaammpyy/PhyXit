@@ -15,7 +15,7 @@ def run_discordbot():
     TOKEN = open("TOKEN", "r").readline().strip()
     intents=discord.Intents.default()
     client=discord.Client(intents=intents)
-    intents.message_content=True
+    # intents.message_content=True
 
     @client.event 
     async def on_ready():
