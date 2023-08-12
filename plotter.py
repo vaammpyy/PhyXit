@@ -55,7 +55,7 @@ def plot_projectile():
 
         plt.tight_layout()
 
-        plt.savefig("{:05d}.jpg".format(int(frame)),dpi=100)
+        plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()
 
 
