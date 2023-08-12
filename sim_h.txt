@@ -1,4 +1,4 @@
 I can simulate the following:
-1) Projectile: `@SimIt sim projectile _<Speed> <Angle> <height> <time-step> <duration>_`
-2) Pendulum: `@SimIt sim pendulum _<mass> <length> <theta> <omega> <drag-coeff> <time-step> <duration>_`
+1) Projectile: `@SimIt sim projectile <Speed> <Angle> <height> <time-step> <duration>`
+2) Pendulum: `@SimIt sim pendulum <mass> <length> <theta> <omega> <drag-coeff> <time-step> <duration>`
 
