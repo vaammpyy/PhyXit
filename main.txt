@@ -1,4 +1,4 @@
 I can do the following for you:
 1. Physics Simulations (Type `@SimIt Sim -h` for more details)
-2. Search for Papers in a required field of study (Type `@SimIt arxiv -h` for more details)
+2. Search for papers/articles from arXiv.org in a required field of study (Type `@SimIt arxiv -h` for more details)
 Note: I can DM you if you use the prefix $ right after @SimIt
