@@ -26,11 +26,17 @@ def handle_response(message) -> str:
         if p_message[1] == '-h':
             return ["\n>>> "+sim_h, 't']
         if p_message[1] == 'projectile':
-            data_vec = [float(x) for x in p_message[2:]]
+            try:
+                data_vec = [float(x) for x in p_message[2:]]
+            except:
+                return ["\n>>> "+sim_h, 't']
             projectile_motion(*data_vec)
             return [['movie.mp4', "op.txt"], 'm']
         if p_message[1] == 'pendulum':
-            data_vec = [float(x) for x in p_message[2:]]
+            try:
+                data_vec = [float(x) for x in p_message[2:]]
+            except:
+                return ["\n>>> "+sim_h, 't']
             # pendulum function(*data_vec)
             return [['movie.mp4', "op.txt"], 'm']
         return ["\n>>> "+sim_h, 't']
