@@ -24,10 +24,6 @@ def handle_response(message) -> str:
             t = float(p_message[6])
             projectile_motion(v, theta, h, dt, t)
 
-            while (True):
-                try:
-                    return [['movie.mp4'], 'm']
-                except:
-                    continue
+            return [['movie.mp4'], 'm']
 
     return ["\n>>> "+help, 't']
