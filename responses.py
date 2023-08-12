@@ -51,20 +51,26 @@ def handle_response(message) -> str:
     if p_message[0] == 'arxiv':
         try:
             os.remove('papers.log')
+            os.remove('paper.pdf')
         except:
             pass
+
         if p_message[1] == '-h':
             return ["\n>>> "+arxiv_h, 't']
+        
         if p_message[1] == 'top':
             query = ' '.join(p_message[2:])
             getList(query)
             paper = open('papers.log', mode='r')
             lines = paper.read()
             return [f"Top 10 papers related to **{query}**\n>>> "+lines, 't']
+        
         if p_message[1] == 'fetch':
             fetchPaper(p_message[2])
             paper = open('papers.log', mode='r')
             lines = paper.read()
-            return [f"Details of paper: **{p_message[2]}**\n>>> "+lines, 't']
+
+            return [[f"Details of paper: **{p_message[2]}**\n>>> "+lines, "paper.pdf"], 'm']
+    
         return ["\n>>> "+arxiv_h, 't']
     return ["\n>>> "+help, 't']
