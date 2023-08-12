@@ -12,7 +12,7 @@ def handle_response(message) -> str:
         # while(True):
         # try:
         # media = ['vid.mp4', '38891d63301e957da6fc19b732a09caf.jpg']
-        return [['vid.mp4', '38891d63301e957da6fc19b732a09caf.jpg'], 'm']
+        return [['movie.mp4', '38891d63301e957da6fc19b732a09caf.jpg'], 'm']
         # except:
         #     continue
     if p_message[0] == 'sim':
@@ -24,6 +24,8 @@ def handle_response(message) -> str:
             t = float(p_message[6])
             projectile_motion(v, theta, h, dt, t)
 
-            return [['movie.mp4'], 'm']
+            
+
+            return [['movie.mp4', "\n>>> "+help], 'm']
 
     return ["\n>>> "+help, 't']

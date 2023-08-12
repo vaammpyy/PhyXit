@@ -6,7 +6,10 @@ async def send_message(message, user_message, is_private):
         response = responses.handle_response(user_message)
         if(response[1]=='m'):
             for i in response[0]:
-                await message.author.send(file=discord.File(i)) if is_private else await message.channel.send(file=discord.File(i))
+                if 'mp4' in i:
+                    await message.author.send(file=discord.File(i)) if is_private else await message.channel.send(file=discord.File(i))
+                else:
+                    await message.author.send(i) if is_private else await message.channel.send(i)  
         else:
             await message.author.send(response[0]) if is_private else await message.channel.send(response[0])
     except Exception as ex:
