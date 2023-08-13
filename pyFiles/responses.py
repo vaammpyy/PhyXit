@@ -29,6 +29,9 @@ def handle_response(message) -> str:
 
         return [['./tmp/movie.mp4', '38891d63301e957da6fc19b732a09caf.jpg'], 'm']
 
+    '''
+    The below area deals with the simulation call functions
+    '''
     if p_message[0] == 'sim':
         try:
             os.remove('./tmp/movie.mp4')
@@ -51,6 +54,10 @@ def handle_response(message) -> str:
         else:
             return ["\n>>> "+sim_h, 't']
         return [['./tmp/movie.mp4'], 'm']
+
+    '''
+    The below area deals with the archive and wiki call functions
+    '''
 
     if p_message[0] == 'arxiv':
         try:
@@ -83,6 +90,9 @@ def handle_response(message) -> str:
             return [[f"Summary of the Article on wikipedia:\n>>> {lines}"], 'm']
         return ["\n>>> "+arxiv_h, 't']
 
+    '''
+    The below area deals with the prof identification APIs
+    '''
     if p_message[0] == 'profs' or p_message[0] == 'prof':
         try:
             os.remove('./tmp/prof.log')

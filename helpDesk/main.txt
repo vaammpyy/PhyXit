@@ -1,7 +1,7 @@
 I can do the following for you:
-1. Physics Simulations (Type `@PhyXit Sim -h` for more details)
-2. Search for papers/articles from arXiv.org in a required field of study (Type `@PhyXit arxiv -h` for more details)
-3. Summarises Wiki articles (Type `@PhyXit arxiv -h` for more details)
-4. Get the google Scholar account of a Professor. (Type `@PhyXit prof -h` for more details)
+1. Physics Simulations (for details: `@PhyXit Sim -h`)
+2. Search for papers/articles from arXiv.org in a required field of study (for details: `@PhyXit arxiv -h`)
+3. Summarises Wiki articles (for details: `@PhyXit arxiv -h`)
+4. Get the google Scholar account of a Professor. (for details: `@PhyXit prof -h` for more details)
 
 Note: I can DM you if you use the prefix $ right after @PhyXit
