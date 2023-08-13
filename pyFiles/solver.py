@@ -43,7 +43,7 @@ def simple_pendulum(m,l,th,dth,r,dt,t_end):
     while (t<t_end):
         fle.write(f"{i} {t} {l} {th} {dth} {x} {y} {k} {p}\n")
         th+=dth*dt
-        dth+=m*g*np.sin(th)*dt+(-dth)*np.abs(dth)*r**2/m*dt
+        dth+=m*g*np.sin(th)*dt-dth*np.abs(dth)*r**2/m*dt
         k=0.5*m*dth**2*l
         p=m*g*(l*np.cos(th))
         x=l*np.sin(th)

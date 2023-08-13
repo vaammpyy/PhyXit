@@ -18,7 +18,7 @@ def fetchPaper(ID):
 
   search = arxiv.Search(id_list=[ID])
   paper = next(search.results())
-  
+  print(paper)
   authors = ""
 
   for author in paper.authors:
@@ -27,5 +27,5 @@ def fetchPaper(ID):
 
   line = f"**Link**: {paper} \n**Title**: {paper.title} \n**Publishing Date**: {paper.published} \n**Author(s)**: {authors} \n**Abstract**: {paper.summary} \n**DOI**: {paper.doi} \n**Primary arxiv Category**: {paper.primary_category}\n**All arxiv Categories**: {paper.categories}\n**URL's associated with this paper**: {paper.links}"
   output.writelines(line)
-
+  print('up2')
   paper.download_pdf(filename="./tmp/paper.pdf")

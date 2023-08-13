@@ -7,9 +7,9 @@ def knowProf(query):
     data = scholarly.fill(author, sections=[])
     fields = ['url_picture', 'name', 'affiliation', 'interests', 'homepage']
 
-    urllib.request.urlretrieve(data[fields[0]], "prof.jpg")
+    urllib.request.urlretrieve(data[fields[0]], "./tmp/prof.jpg")
 
-    with open("prof.log", "w") as output:
+    with open("./tmp/prof.log", "w") as output:
         for i in range(1, len(fields)):
             if fields[i] in data.keys():
                 line = f"{fields[i]}: {data[fields[i]]}\n"
@@ -26,5 +26,5 @@ def researchField(keyword):
         # print()
         
 
-researchField("Quantum Cosmology")
+
 
