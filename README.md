@@ -1,4 +1,5 @@
 # PhyXit
+![logo](logo.jpg)
 1) Bot intro 
 2) invite link
 3) description
