@@ -1,5 +1,9 @@
 # PhyXit
----
+
+1) Bot intro 
+2) invite link
+3) description
+
 Introducing PhyXit: Your Ultimate Physics Companion
 
 Step into the world of physics with PhyXit, your virtual assistant for all things related to the fundamental laws that govern our universe. Whether you're a student, researcher, or simply curious about the mysteries of the physical world, PhyXit is here to make your journey through physics smoother and more enjoyable.
@@ -15,5 +19,45 @@ Connect with Professors: Need guidance or assistance? PhyXit has got you covered
 Get ready to embark on a journey through the wonders of physics with PhyXit as your trusty companion. Empower your learning, research, and connections in the world of physics like never before. Let PhyXit be your bridge to understanding the universe's most intriguing phenomena.
 
 ---
-# Functions
+
+# Quick start
+
+1) 
+
+
+---
+# Usage
+
+## Simulations
+
+You can use PhyXit currently to run the following simulations:-
+*   Projectile motion: `projectile`
+*   Simple pendulum: `pendulum`
+*   Spring mass: `spring`
+*   Diffusion: `diffusion`
+*   Charge Interaction: `charge`
+
+`@PhyXit sim <sim-name> *<initial-conditions>`
+
+For details regarding the initial conditions of the simulations use.
+
+`@PhyXit sim -h`
+
+## Arxiv and Wikipedia
+
+PhyXit can also fetch results from [arxiv](https://arxiv.org/) and [wikipedia](https://www.wikipedia.org/).
+
+* To get 10 latest research papers related to a certain keyword you can use.
+`@PhyXit arxiv top <keywords>`
+
+* If you know the arxiv `paper-id` you can directly get a summary of it and a downloadable pdf using PhyXit.
+`@PhyXit arxiv fetch <paper-id>`
+
+* Phyxit can also summarize [wikipedia](https://www.wikipedia.org/) articles for you.
+`@PhyXit arxiv wiki <search-query>`
+
+## Google Scholar
+
+PhyXit can also display a professor's google scholar profile.
+`@PhyXit profs name <Name>`
 
