@@ -261,7 +261,7 @@ def plot_charge_interaction():
         ax5.scatter(qx2[frm],qy2[frm],color=c2,edgecolors='k',s=200*abs(int(q2[frm])))
 
         ax5.scatter(xp[frm],yp[frm],color='yellow',edgecolors='k',s=200)
-        ax5.plot(xp[:frm+1],yp[:frm+1],color='--yellow',s=200)
+        ax5.plot(xp[:frm+1],yp[:frm+1],color='yellow',s=200)
         ax5.set_xlabel("X-axis",fontsize=24)
         ax5.set_ylabel("Y-axis",fontsize=24)
 

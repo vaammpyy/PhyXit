@@ -43,6 +43,10 @@ def handle_response(message) -> str:
 
         elif p_message[1] == 'rand_walk':
             random_walker_motion(*data_vec)
+
+        elif p_message[1] == 'charged_int':
+            charge_interaction_motion(*data_vec)
+
         else:
             return ["\n>>> "+sim_h, 't']
         return [['./tmp/movie.mp4'], 'm']

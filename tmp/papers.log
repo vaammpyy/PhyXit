@@ -1,33 +1,10 @@
-**Link**: http://arxiv.org/abs/2308.04772v1 
-**Title**: Kinetic Monte Carlo Simulations of Sodium Ion Transport in NaSICON Electrodes 
-**Publishing Date**: 2023-08-09 07:58:44+00:00 
-**Author(s)**: Ziliang Wang, Tara P. Mishra, Weihang Xie, Zeyu Deng, Gopalakrishnan Sai Gautam, Anthony K. Cheetham, Pieremanuele Canepa,  
-**Abstract**: The development of high-performance sodium (Na) ion batteries requires
-improved electrode materials. The energy and power densities of Na superionic
-conductor (NaSICON) electrode materials are promising for large-scale energy
-storage applications. However, several practical issues limit the full
-utilization of the theoretical energy densities of NaSICON electrodes. A
-pressing challenge lies in the limited sodium extraction in low Na content
-NaSICONs, e.g., $\rm Na_1V^{IV}V^{IV}(PO_4)_3 \leftrightarrow
-V^{V}V^{IV}(PO_4)_3 + 1e^- + 1Na^+$. Hence, it is important to quantify the
-Na-ion mobility in a broad range of NaSICON electrodes. Using a kinetic Monte
-Carlo approach bearing the accuracy of first-principles calculations, we
-elucidate the variability of Na-ion transport vs. Na content in three important
-NaSICON electrodes, Na$_{\rm x}$Ti$_{2}$(PO$_{4}$)$_{3}$, Na$_{\rm
-x}$V$_{2}$(PO$_{4}$)$_{3}$, and Na$_{\rm x}$Cr$_{2}$(PO$_{4}$)$_{3}$. Our study
-suggests that Na$^+$ transport in NaSICON electrodes is almost entirely
-determined by the local electrostatic and chemical environment set by the
-transition metal and the polyanionic scaffold. The competition with the
-ordering-disordering phenomena of Na-vacancies also plays a role in influencing
-Na-transport. We link the variations in the Na$^+$ kinetic properties by
-analyzing the competition of ligand field stabilization transition metal ions
-and their ionic radii. We interpret the limited Na-extraction at $x = 1$
-observed experimentally by gaining insights into the local Na-vacancy
-interplay. We propose that targeted chemical substitutions of transition metals
-disrupting local charge arrangements will be critical to reducing the
-occurrence of strong Na$^+$-vacancy orderings at low Na concentrations, thus,
-expanding the accessible capacities of these electrode materials. 
-**DOI**: None 
-**Primary arxiv Category**: cond-mat.mtrl-sci
-**All arxiv Categories**: ['cond-mat.mtrl-sci', 'cond-mat.stat-mech']
-**URL's associated with this paper**: [arxiv.Result.Link('http://arxiv.org/abs/2308.04772v1', title=None, rel='alternate', content_type=None), arxiv.Result.Link('http://arxiv.org/pdf/2308.04772v1', title='pdf', rel='related', content_type=None)]
+1. **Limitations of Game Comonads via Homomorphism Indistinguishability** : http://arxiv.org/abs/2308.05693v1
+2. **Banzhaf Values for Facts in Query Answering** : http://arxiv.org/abs/2308.05588v1
+3. **Intercept Function and Quantity Bidding in Two-stage Electricity Market with Market Power Mitigation** : http://arxiv.org/abs/2308.05570v1
+4. **AI4GCC -- Track 3: Consumption and the Challenges of Multi-Agent RL** : http://arxiv.org/abs/2308.05260v1
+5. **MNL-Prophet: Sequential Assortment Selection under Uncertainty** : http://arxiv.org/abs/2308.05207v1
+6. **Sound propagation in realistic interactive 3D scenes with parameterized sources using deep neural operators** : http://arxiv.org/abs/2308.05141v1
+7. **Service Reservation and Pricing for Green Metaverses: A Stackelberg Game Approach** : http://arxiv.org/abs/2308.04914v1
+8. **Ehrenfeucht-Fraïssé Games in Semiring Semantics** : http://arxiv.org/abs/2308.04910v1
+9. **Adversarial Deep Reinforcement Learning for Cyber Security in Software Defined Networks** : http://arxiv.org/abs/2308.04909v1
+10. **Tracking Players in a Badminton Court by Two Cameras** : http://arxiv.org/abs/2308.04872v1
