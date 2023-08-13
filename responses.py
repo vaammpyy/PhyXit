@@ -8,6 +8,15 @@ f = open('main.txt', mode='r')
 help = f.read()
 sim_h = open('sim_h.txt', mode='r').read()
 arxiv_h = open('arxiv_h.txt', mode='r').read()
+data_vec = 0
+
+
+def vec(arr):
+    global data_vec
+    try:
+        data_vec = [float(x) for x in arr]
+    except:
+        return ["\n>>> "+sim_h, 't']
 
 
 def handle_response(message) -> str:
@@ -21,41 +30,22 @@ def handle_response(message) -> str:
     if p_message[0] == 'sim':
         try:
             os.remove('movie.mp4')
-            os.remove('op.txt')
         except:
             pass
-        if p_message[1] == '-h':
-            return ["\n>>> "+sim_h, 't']
+        vec(p_message[2:])
         if p_message[1] == 'projectile':
-            try:
-                data_vec = [float(x) for x in p_message[2:]]
-            except:
-                return ["\n>>> "+sim_h, 't']
             projectile_motion(*data_vec)
-            return [['movie.mp4', "op.txt"], 'm']
-        if p_message[1] == 'pendulum':
-            try:
-                data_vec = [float(x) for x in p_message[2:]]
-            except:
-                return ["\n>>> "+sim_h, 't']
+        elif p_message[1] == 'pendulum':
             single_pendulum_motion(*data_vec)
-            return [['movie.mp4', "op.txt"], 'm']
-        if p_message[1] == 'spring':
-            try:
-                data_vec = [float(x) for x in p_message[2:]]
-            except:
-                return ["\n>>> "+sim_h, 't']
-            spring_block_motion(*data_vec)
-            return [['movie.mp4', "op.txt"], 'm']
 
-        if p_message[1] == 'rand_walk':
-            try:
-                data_vec = [float(x) for x in p_message[2:]]
-            except:
-                return ["\n>>> "+sim_h, 't']
+        elif p_message[1] == 'spring':
+            spring_block_motion(*data_vec)
+
+        elif p_message[1] == 'rand_walk':
             random_walker_motion(*data_vec)
-            return [['movie.mp4', "op.txt"], 'm']
-        return ["\n>>> "+sim_h, 't']
+        else:
+            return ["\n>>> "+sim_h, 't']
+        return [['movie.mp4'], 'm']
 
     if p_message[0] == 'arxiv':
         try:
