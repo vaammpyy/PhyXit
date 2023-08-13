@@ -77,7 +77,7 @@ def random_walker(n,steps,a):
     step=0
     r=np.linspace(-1,1,1000)
     dictionary={'frame':[],'x':[],'y':[]}
-    while (step<n):
+    while (step<steps):
         dictionary["frame"].append(step)
         dictionary['x'].append(x)
         dictionary['y'].append(y)
