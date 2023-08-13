@@ -37,7 +37,7 @@ You can use PhyXit currently to run the following simulations:-
 *   Simple pendulum: `pendulum`
 *   Spring mass: `spring`
 *   Diffusion: `diffusion`
-*   Charge Interaction: `charge`
+*   Charge Interaction: `charged_int`
 
 `@PhyXit sim <sim-name> *<initial-conditions>`
 
