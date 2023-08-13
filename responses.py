@@ -47,6 +47,14 @@ def handle_response(message) -> str:
                 return ["\n>>> "+sim_h, 't']
             spring_block_motion(*data_vec)
             return [['movie.mp4', "op.txt"], 'm']
+
+        if p_message[1] == 'rand_walk':
+            try:
+                data_vec = [float(x) for x in p_message[2:]]
+            except:
+                return ["\n>>> "+sim_h, 't']
+            random_walker_motion(*data_vec)
+            return [['movie.mp4', "op.txt"], 'm']
         return ["\n>>> "+sim_h, 't']
 
     if p_message[0] == 'arxiv':
@@ -58,23 +66,23 @@ def handle_response(message) -> str:
 
         if p_message[1] == '-h':
             return ["\n>>> "+arxiv_h, 't']
-        
+
         if p_message[1] == 'top':
             query = ' '.join(p_message[2:])
             getList(query)
             paper = open('papers.log', mode='r')
             lines = paper.read()
             return [f"Top 10 papers related to **{query}**\n>>> "+lines, 't']
-        
+
         if p_message[1] == 'fetch':
             fetchPaper(p_message[2])
             paper = open('papers.log', mode='r')
             lines = paper.read()
 
             return [[f"Details of paper: **{p_message[2]}**\n>>> "+lines, "paper.pdf"], 'm']
-    
+
         return ["\n>>> "+arxiv_h, 't']
-    
+
     if p_message[0] == 'profs' or p_message[0] == 'prof':
         try:
             os.remove('prof.log')
@@ -90,6 +98,5 @@ def handle_response(message) -> str:
             lines = paper.read()
 
             return [["prof.jpg", f"\n>>> {lines}"], 'm']
-
 
     return ["\n>>> "+help, 't']
