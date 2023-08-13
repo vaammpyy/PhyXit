@@ -2,6 +2,7 @@ import discord
 import os
 from simulate import *
 from papers import *
+from prof import *
 
 f = open('main.txt', mode='r')
 help = f.read()
@@ -73,4 +74,22 @@ def handle_response(message) -> str:
             return [[f"Details of paper: **{p_message[2]}**\n>>> "+lines, "paper.pdf"], 'm']
     
         return ["\n>>> "+arxiv_h, 't']
+    
+    if p_message[0] == 'profs' or p_message[0] == 'prof':
+        try:
+            os.remove('prof.log')
+            os.remove('prof.jpg')
+        except:
+            pass
+
+        if p_message[1] == 'name':
+            name = ' '.join(p_message[2:])
+            knowProf(name)
+
+            paper = open('prof.log', mode='r')
+            lines = paper.read()
+
+            return [["prof.jpg", f"\n>>> {lines}"], 'm']
+
+
     return ["\n>>> "+help, 't']
