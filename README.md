@@ -1,5 +1,4 @@
 # PhyXit
-
 1) Bot intro 
 2) invite link
 3) description
@@ -20,10 +19,14 @@ Get ready to embark on a journey through the wonders of physics with PhyXit as y
 
 ---
 
-# Quick start
+# Simulation quick start guide
 
-1) 
-
+* To run a quick simulation use the following commands:
+    1) Projectile : `@PhyXit sim projectile 10 45 5 0.1 5` 
+    2) Simple pendulum : `@PhyXit sim pendulum 1 1 45 0 0.5 0.1 5`
+    3) Spring and mass system: `@PhyXit sim spring 1 10 1 1.5 0 0.3 0.1 5`
+    4) Diffusion: `@PhyXit sim diffusion 30 50 0.1`
+    5) Charge particle interaction: `@PhyXit sim charged_int 2 -1 2 1 -1 0 1 0 0 0.1 5`
 
 ---
 # Usage
@@ -60,4 +63,8 @@ PhyXit can also fetch results from [arxiv](https://arxiv.org/) and [wikipedia](h
 
 PhyXit can also display a professor's google scholar profile.
 `@PhyXit profs name <Name>`
+
+---
+# How you can contribute?
+
 

@@ -9,5 +9,5 @@ The commands for the above are:
 1) `@PhyXit sim projectile <Speed> <Angle> <height> <time-step> <duration>`
 2) `@PhyXit sim pendulum <mass> <length> <theta> <omega> <drag-coeff> <time-step> <duration>`
 3) `@PhyXit sim spring <mass> <SpringConst> <MeanPos> <I-Pos> <I-Velocity> <FrictionCoeff> <time-step> <duration>`
-4) `@PhyXit sim rand_walk <#Particles> <#Steps> <DiffusionRate>`
+4) `@PhyXit sim diffusion <#Particles> <#Steps> <DiffusionRate>`
 5) `@PhyXit sim charged_int <I-distance> <Q1> <Q2> <Particle mass> <particle charge> <Xp> <Yp> <Vxp> <Vyp> <timestep> <duration>`
