@@ -13,7 +13,7 @@ def projectile(v,theta,h,dt,t_end):
     i=0
     ax=0
     ay=-9.81
-    fle= open("data.txt","w+")
+    fle= open("./tmp/data.txt","w+")
     while (t<t_end):
         fle.write(f"{i} {t} {x} {y} {vx} {vy}\n")
         x+=vx*dt
@@ -37,7 +37,7 @@ def simple_pendulum(m,l,th,dth,r,dt,t_end):
     g=-9.81
     k=0.5*m*dth**2*l
     p=m*g*(l*np.cos(th))
-    fle= open("data.txt","w+")
+    fle= open("./tmp/data.txt","w+")
     x=l*np.sin(th)
     y=-l*np.cos(th)
     while (t<t_end):
@@ -59,7 +59,7 @@ def spring_block(m,ks,x0,x,vx,mu,dt,t_end):
     k=0.5*m*vx**2
     p=0.5*k*(x0-x)**2
     y=0
-    fle= open("data.txt","w+")
+    fle= open("/tmp/data.txt","w+")
     while (t<t_end):
         fle.write(f"{i} {t} {x0} {x} {y} {vx} {k} {p}\n")
         x+=vx*dt
@@ -90,7 +90,7 @@ def random_walker(n,steps,a):
             y.append(dictionary['y'][step][p]+choice(r)*a)
             p+=1
         step+=1
-    np.save("./data.npy",dictionary)
+    np.save("./tmp/data.npy",dictionary)
 
 def charge_interaction(d,q1,q2,mp,qp,xp,yp,vxp,vyp,dt,t_end):
     q1_x=-d/2

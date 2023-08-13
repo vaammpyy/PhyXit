@@ -5,9 +5,9 @@ import pandas as pd
 import subprocess
 
 def make_movie():
-    cmd='ffmpeg -framerate 5 -start_number 0 -i ./%05d.jpg -vcodec mpeg4 -vb 20M '+'movie.mp4'
+    cmd='ffmpeg -framerate 5 -start_number 0 -i ./%05d.jpeg -vcodec mpeg4 -vb 20M '+'movie.mp4'
     os.system(cmd)
-    os.system("rm -r ./*.jpg")
+    os.system("rm -r ./*.jpeg")
 
 def plot_projectile():
     data = pd.read_csv('data.txt', delimiter=' ').to_numpy().T
@@ -25,8 +25,8 @@ def plot_projectile():
         os.system("awk 'FNR == %d {print $0}' data.txt > outputfile"%(int(frame)))
         cmd="""
 gnuplot <<- EOF
-set terminal png size 1200,1000
-set output "{:05d}.jpg"
+set terminal jpeg size 1200,1000
+set output "{:05d}.jpeg"
 
 set multiplot title "Plot_something_something"
 set nokey

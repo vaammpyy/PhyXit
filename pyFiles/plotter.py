@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 
 def make_movie():
-    cmd='ffmpeg -framerate 5 -start_number 0 -i ./%05d.jpg -vcodec mpeg4 -vb 20M '+'movie.mp4'
+    cmd='ffmpeg -framerate 5 -start_number 0 -i ./tmp/%05d.jpg -vcodec mpeg4 -vb 20M '+'./tmp/movie.mp4'
     os.system(cmd)
-    os.system("rm -r ./*.jpg")
+    os.system("rm -r ./tmp/*.jpg")
 
 def plot_projectile():
     data = pd.read_csv('data.txt', delimiter=' ').to_numpy().T
@@ -56,7 +56,7 @@ def plot_projectile():
 
         plt.tight_layout()
 
-        plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
+        plt.savefig("./tmp/{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()
 
 
@@ -117,7 +117,7 @@ def plot_simple_pendulum():
 
         plt.tight_layout()
 
-        plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
+        plt.savefig("./tmp/{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()
 
 def plot_spring_block():
@@ -178,7 +178,7 @@ def plot_spring_block():
 
         plt.tight_layout()
 
-        plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
+        plt.savefig("./tmp/{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()
     
 def plot_random_walker():
@@ -211,5 +211,5 @@ def plot_random_walker():
             ax2.set_ylabel("# particles",fontsize=24)
             #plt.scatter(x[0],y[0],color='green',edgecolors='black',s=200)
         plt.tight_layout()
-        plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
+        plt.savefig("./tmp/{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()

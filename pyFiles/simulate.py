@@ -1,5 +1,5 @@
-from pyFiles.solver import *
-from pyFiles.plotter import *
+from solver import *
+from plotter import *
 
 
 def projectile_motion(v, theta, h, dt, t_end):
@@ -20,7 +20,7 @@ def spring_block_motion(m, ks, x0, x, vx, mu, dt, t_end):
     make_movie()
 
 
-def random_walker_motion(n, steps, a):
-    random_walker(n, steps, a)
+def random_walker_motion(n,steps,a):
+    random_walker(n,steps,a)
     plot_random_walker()
     make_movie()
