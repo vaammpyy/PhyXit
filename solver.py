@@ -91,4 +91,3 @@ def random_walker(n,steps,a):
             p+=1
         step+=1
     np.save("./data.npy",dictionary)
-
