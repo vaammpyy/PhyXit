@@ -24,3 +24,11 @@ def random_walker_motion(n, steps, a):
     random_walker(n, steps, a)
     plot_random_walker()
     make_movie()
+
+def charge_interaction_motion(d,q1,q2,mp,qp,xp,yp,vxp,vyp,dt,t_end):
+    charge_interaction(d,q1,q2,mp,qp,xp,yp,vxp,vyp,dt,t_end)
+    plot_charge_interaction()
+    make_movie()
+
+charge_interaction_motion(2,-10,3,2,1,0,0,1,-1,0.1,5)
+
