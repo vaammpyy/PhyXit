@@ -94,5 +94,48 @@ def random_walker(n,steps,a):
 
 def charge_interaction(d,q1,q2,mp,qp,xp,yp,vxp,vyp,dt,t_end):
     q1_x=-d/2
-    q1_x=-d/2
-    q1_x=-d/2
+    q2_x=+d/2
+    q1_y=q2_y=0
+    t=0
+    i=0
+    k=0.5*mp*(vxp**2+vyp**2)
+    p=(q1*qp)/(np.sqrt((q1_x-xp)**2+yp**2))+(q2*qp)/(np.sqrt((q2_x-xp)**2+yp**2))
+    fle= open("./tmp/data.txt","w+")
+    while t<t_end:
+        fle.write(f"{i} {t} {q1} {q1_x} {q1_y} {q2} {q2_x} {q2_y} {qp} {xp} {yp} {vxp} {vyp} {k} {p}\n")
+        r1=np.sqrt((q1_x-xp)**2+yp**2)
+        r2=np.sqrt((q2_x-xp)**2+yp**2)
+        if r1<0.01:
+            r1=0.01
+        if r2<0.01:
+            r2=0.01
+        f1=qp*q1/r1**2
+        b1=q1_x-xp
+        p=yp
+        if abs(b1)<0.01:
+            b1=np.sign(b1)*0.01
+        th1=np.arctan(p/b1)
+        f1_x=np.cos(th1)*f1
+        f1_y=np.sin(th1)*f1
+
+        f2=qp*q2/r2**2
+        b2=q2_x-xp
+        p=yp
+        if abs(b2)<0.01:
+            b2=np.sign(b2)*0.01
+        th2=np.arctan(p/b2)
+        f2_x=np.cos(th2)*f2
+        f2_y=np.sin(th2)*f2
+        fx=f1_x+f2_x
+        fy=f1_x+f2_y
+        xp+=vxp*dt
+        yp+=vyp*dt
+        vyp+=fx/mp*dt
+        vyp+=fy/mp*dt
+        k=0.5*mp*(vxp**2+vyp**2)
+        p=(q1*qp)/(np.sqrt((b1)**2+yp**2))+(q2*qp)/(np.sqrt((b2)**2+yp**2))
+        i+=1
+        t+=dt
+    fle.close()
+
+

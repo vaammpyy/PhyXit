@@ -61,7 +61,7 @@ def plot_projectile():
 
 
 def plot_simple_pendulum():
-    data = pd.read_csv('./tmp/data.txt', delimiter=' ').to_numpy().T
+    data = pd.read_csv('./tmp/./tmp/data.txt', delimiter=' ').to_numpy().T
     # print(data[0])
     frames=data[0]-1
     t=data[1]
@@ -212,5 +212,80 @@ def plot_random_walker():
             ax2.set_ylabel("# particles",fontsize=24)
             #plt.scatter(x[0],y[0],color='green',edgecolors='black',s=200)
         plt.tight_layout()
+        plt.savefig("./tmp/{:05d}.jpg".format(int(frame)),dpi=50)
+        plt.close()
+
+def plot_charge_interaction():
+    data = pd.read_csv('./tmp/data.txt', delimiter=' ').to_numpy().T
+    frames=data[0]-1
+    t=data[1]
+    q1=data[2]
+    qx1=data[3]
+    qy1=data[4]
+    q2=data[5]
+    qx2=data[6]
+    qy2=data[7]
+    qp=data[8]
+    xp=data[9]
+    yp=data[10]
+    vxp=data[11]
+    vyp=data[12]
+    k=data[13]
+    p=data[14]
+
+    for frame in frames:
+        fig=plt.figure(figsize=(25,20),facecolor='white')
+
+        fig.suptitle(f"Time={t[int(frame)]:.3f}", fontsize=30)
+
+        gs = fig.add_gridspec(2,4)
+        ax1 = fig.add_subplot(gs[1, 0])
+        ax2 = fig.add_subplot(gs[1, 1])
+        ax3 = fig.add_subplot(gs[1, 2])
+        ax4 = fig.add_subplot(gs[1, 3])
+        ax5 = fig.add_subplot(gs[0, :])
+
+        frm=int(frame)
+
+
+        if q1[frm]>0:
+            c1='blue'
+        else:
+            c1='red'
+        ax5.scatter(qx1[frm],qy1[frm],color=c1,edgecolors='k',s=200*abs(int(q1[frm])))
+
+        if q2[frm]>0:
+            c2='blue'
+        else:
+            c2='red'
+        ax5.scatter(qx2[frm],qy2[frm],color=c2,edgecolors='k',s=200*abs(int(q2[frm])))
+
+        ax5.scatter(xp[frm],yp[frm],color='yellow',edgecolors='k',s=200)
+        ax5.plot(xp[:frm+1],yp[:frm+1],color='--yellow',s=200)
+        ax5.set_xlabel("X-axis",fontsize=24)
+        ax5.set_ylabel("Y-axis",fontsize=24)
+
+        ax1.plot(t,vxp,'--k')
+        ax1.scatter(t[frm],vxp[frm],color='yellow',edgecolors='k',s=200)
+        ax1.set_xlabel("Time",fontsize=24)
+        ax1.set_ylabel("VX",fontsize=24)
+
+        ax2.plot(t,vyp,'--k')
+        ax2.scatter(t[frm],vyp[frm],color='yellow',edgecolors='k',s=200)
+        ax2.set_xlabel("Time",fontsize=24)
+        ax2.set_ylabel("VX",fontsize=24)
+
+        ax3.plot(t,k,'--k')
+        ax3.scatter(t[frm],k[frm],color='yellow',edgecolors='k',s=200)
+        ax3.set_xlabel("Time",fontsize=24)
+        ax3.set_ylabel("KE",fontsize=24)
+
+        ax4.plot(t,p,'--k')
+        ax4.scatter(t[frm],p[frm],color='yellow',edgecolors='k',s=200)
+        ax4.set_xlabel("Time",fontsize=24)
+        ax4.set_ylabel("PE",fontsize=24)
+
+        plt.tight_layout()
+
         plt.savefig("./tmp/{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()
