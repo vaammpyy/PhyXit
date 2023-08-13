@@ -72,7 +72,3 @@ EOF
     """.format(int(frame))
         os.system(cmd)
         
-
-
-plot_projectile_gnuplot()
-make_movie_gnuplot()
