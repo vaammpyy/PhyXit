@@ -72,6 +72,7 @@ def spring_block(m,ks,x0,x,vx,mu,dt,t_end):
     fle.close()
 
 def random_walker(n,steps,a):
+    n = int(n)
     x=[0]*n
     y=[0]*n
     step=0
