@@ -50,17 +50,21 @@ For details regarding the initial conditions of the simulations use.
 PhyXit can also fetch results from [arxiv](https://arxiv.org/) and [wikipedia](https://www.wikipedia.org/).
 
 * To get 10 latest research papers related to a certain keyword you can use.
+
 `@PhyXit arxiv top <keywords>`
 
 * If you know the arxiv `paper-id` you can directly get a summary of it and a downloadable pdf using PhyXit.
+
 `@PhyXit arxiv fetch <paper-id>`
 
 * Phyxit can also summarize [wikipedia](https://www.wikipedia.org/) articles for you.
+
 `@PhyXit arxiv wiki <search-query>`
 
 ## Google Scholar
 
 PhyXit can also display a professor's google scholar profile.
+
 `@PhyXit profs name <Name>`
 
 # How you can contribute?
