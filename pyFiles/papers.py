@@ -25,7 +25,6 @@ def fetchPaper(ID):
     authors += str(author) + ", "
 
 
-  line = f"**Link**: {paper} \n**Title**: {paper.title} \n**Publishing Date**: {paper.published} \n**Author(s)**: {authors} \n**Abstract**: {paper.summary} \n**DOI**: {paper.doi} \n**Primary arxiv Category**: {paper.primary_category}\n**All arxiv Categories**: {paper.categories}\n**URL's associated with this paper**: {paper.links}"
+  line = f"**Link**: {paper} \n**Title**: {paper.title} \n**Publishing Date**: {paper.published} \n**Author(s)**: {authors} \n**Abstract**: {paper.summary} \n**DOI**: {paper.doi}"
   output.writelines(line)
-  print('up2')
   paper.download_pdf(filename="./tmp/paper.pdf")

@@ -69,13 +69,11 @@ def handle_response(message) -> str:
             return [f"Top 10 papers related to **{query}**\n>>> "+lines, 't']
 
         if p_message[1] == 'fetch':
-            print("Up")
             fetchPaper(p_message[2])
             paper = open('./tmp/papers.log', mode='r')
             lines = paper.read()
-            print("Down")
 
-            return [[f"Details of paper: **{p_message[2]}**\n>>> "+lines, "./tmp/paper.pdf"], 'm']
+            return [[f"Details of paper: **{p_message[2]}**\n>>> {lines}", "./tmp/paper.pdf"], 'm']
 
         return ["\n>>> "+arxiv_h, 't']
 
