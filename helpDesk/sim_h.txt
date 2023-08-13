@@ -1,5 +1,13 @@
 I can simulate the following:
-1) Projectile: `@SimIt sim projectile <Speed> <Angle> <height> <time-step> <duration>`
-2) Pendulum: `@SimIt sim pendulum <mass> <length> <theta> <omega> <drag-coeff> <time-step> <duration>`
-3) Spring-Mass: `@SimIt sim spring <mass> <SpringConst> <MeanPos> <I-Pos> <I-Velocity> <FrictionCoeff> <time-step> <duration>`
-4) Random-Walk: `@SimIt sim rand_walk <#Particles> <#Steps> <DiffusionRate>`
+1)**Projectile**: 2-D projectile motion under gravity.
+2)**Pendulum**: Simple pendulum motion with possible dissipation.
+3)**Spring-Mass**: Simple one-block and spring system with frictional forces considered.
+4)**Diffusion**: Random diffusion simulation of a given number of particles.
+5)**Charge-interactions**: Motion of a charged particle under the influence of two fixed point charges.
+===
+The commands for the above are:
+1) `@PhyXit sim projectile <Speed> <Angle> <height> <time-step> <duration>`
+2) `@PhyXit sim pendulum <mass> <length> <theta> <omega> <drag-coeff> <time-step> <duration>`
+3) `@PhyXit sim spring <mass> <SpringConst> <MeanPos> <I-Pos> <I-Velocity> <FrictionCoeff> <time-step> <duration>`
+4) `@PhyXit sim rand_walk <#Particles> <#Steps> <DiffusionRate>`
+5) `@PhyXit sim charged_int <I-distance> <Q1> <Q2> <Particle mass> <particle charge> <Xp> <Yp> <Vxp> <Vyp> <timestep> <duration>`

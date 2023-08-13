@@ -1,4 +1,4 @@
 I can get various research papers using:
-1. Keywords: `@SimIt arxiv top <keywords>`
-2. Paper-ID: `@SimIt arxiv fetch <paper-id>`
-3. Wiki-Summary: `@SimIt arxiv wiki <search query>`
+1. Keywords: `@PhyXit arxiv top <keywords>`
+2. Paper-ID: `@PhyXit arxiv fetch <paper-id>`
+3. Wiki-Summary: `@PhyXit arxiv wiki <search query>`

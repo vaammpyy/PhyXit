@@ -48,7 +48,6 @@ def handle_response(message) -> str:
 
         elif p_message[1] == 'charged_int':
             charge_interaction_motion(*data_vec)
-
         else:
             return ["\n>>> "+sim_h, 't']
         return [['./tmp/movie.mp4'], 'm']

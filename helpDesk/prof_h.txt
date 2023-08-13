@@ -1,2 +1,2 @@
 I can get you a Professor's Google Scholar profile by:
-`@SimIt profs name <Name>`
+`@PhyXit profs name <Name>`
