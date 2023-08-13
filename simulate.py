@@ -20,9 +20,9 @@ def spring_block_motion(m, ks, x0, x, vx, mu, dt, t_end):
     make_movie()
 
 
-def random_walker_motion(n,a):
-    random_walker(n,a)
+def random_walker_motion(n,steps,a):
+    random_walker(n,steps,a)
     plot_random_walker()
     make_movie()
 
-random_walker_motion(100,0.1)
+random_walker_motion(50,20,0.1)

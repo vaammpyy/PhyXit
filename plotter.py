@@ -182,23 +182,34 @@ def plot_spring_block():
         plt.close()
     
 def plot_random_walker():
-    data = pd.read_csv('data.txt', delimiter=' ').to_numpy().T
-    frames=data[0]-1
-    x=data[1]
-    y=data[2]
-    x_min=np.min(x)
-    x_max=np.max(x)
-    y_min=np.min(y)
-    y_max=np.max(y)
+    data=np.load("./data.npy",allow_pickle=True).item()
+    frames=data['frame']
+    x_min=np.min(np.ndarray.flatten(np.array(data['x'])))-1
+    x_max=np.max(np.ndarray.flatten(np.array(data['x'])))+1
+    y_min=np.min(np.ndarray.flatten(np.array(data['y'])))-1
+    y_max=np.max(np.ndarray.flatten(np.array(data['y'])))+1
     for frame in frames:
+        x_all=np.array(data['x'][frame])
+        y_all=np.array(data['y'][frame])
         fig=plt.figure(figsize=(25,20),facecolor='white')
-        plt.plot(x[:int(frame)+1],y[:int(frame)+1],'--k')
-        plt.scatter(x[int(frame)],y[int(frame)],color='red',edgecolors='black',s=200)
-        plt.scatter(x[0],y[0],color='green',edgecolors='black',s=200)
-        plt.title(f"Step={int(frame)}",fontsize=30)
-        plt.xlim((x_min-1,x_max+1))
-        plt.ylim((y_min-1,y_max+1))
-        plt.tight_layout()
+        fig.suptitle(f"Steps={int(frame)}", fontsize=30)
+        gs = fig.add_gridspec(2,1)
+        ax1 = fig.add_subplot(gs[0,0])
+        ax2 = fig.add_subplot(gs[1,0])
+        ax1.set_xlim([x_min,x_max])
+        ax1.set_ylim([y_min,y_max])
+        n=len(x_all)
+        for i in range(n):
+            ax1.scatter(x_all[i],y_all[i],color='red',edgecolors='black',s=200)
+            ax1.set_xlabel("X-axis",fontsize=24)
+            ax1.set_ylabel("Y-axis",fontsize=24)
 
+            ax2.hist(np.sqrt(x_all**2+y_all**2),alpha=0.5)
+            ax2.set_ylim([0,n/4])
+            ax2.set_xlim([0,np.sqrt(n)/2])
+            ax2.set_xlabel("Radial distance",fontsize=24)
+            ax2.set_ylabel("# particles",fontsize=24)
+            #plt.scatter(x[0],y[0],color='green',edgecolors='black',s=200)
+        plt.tight_layout()
         plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()

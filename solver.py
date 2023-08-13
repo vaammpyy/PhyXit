@@ -71,15 +71,23 @@ def spring_block(m,ks,x0,x,vx,mu,dt,t_end):
         t+=dt
     fle.close()
 
-def random_walker(n,a):
-    x=0
-    y=0
-    steps=0
+def random_walker(n,steps,a):
+    x=[0]*n
+    y=[0]*n
+    step=0
     r=np.linspace(-1,1,1000)
-    fle= open("data.txt","w+")
-    while (steps<n):
-        fle.write(f"{steps} {x} {y}\n")
-        x+=choice(r)*a
-        y+=choice(r)*a
-        steps+=1
-    fle.close()
+    dictionary={'frame':[],'x':[],'y':[]}
+    while (step<n):
+        dictionary["frame"].append(step)
+        dictionary['x'].append(x)
+        dictionary['y'].append(y)
+        p=0
+        x=[]
+        y=[]
+        while p<n:
+            x.append(dictionary['x'][step][p]+choice(r)*a)
+            y.append(dictionary['y'][step][p]+choice(r)*a)
+            p+=1
+        step+=1
+    np.save("./data.npy",dictionary)
+
