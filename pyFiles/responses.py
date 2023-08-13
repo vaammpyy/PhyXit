@@ -3,6 +3,8 @@ import os
 from pyFiles.simulate import *
 from pyFiles.papers import *
 from pyFiles.prof import *
+from pyFiles.wiki import *
+
 
 Help = open('./helpDesk/main.txt', mode='r').read()
 sim_h = open('./helpDesk/sim_h.txt', mode='r').read()
@@ -74,7 +76,11 @@ def handle_response(message) -> str:
             lines = paper.read()
 
             return [[f"Details of paper: **{p_message[2]}**\n>>> {lines}", "./tmp/paper.pdf"], 'm']
-
+        if p_message[1] == 'wiki':
+            query = ' '.join(p_message[2:])
+            getSummary(query)
+            paper = open('./tmp/papers.log', mode='r')
+            return [[f"Summary of the Article on wikipedia:\n>>>"], 'm']
         return ["\n>>> "+arxiv_h, 't']
 
     if p_message[0] == 'profs' or p_message[0] == 'prof':
