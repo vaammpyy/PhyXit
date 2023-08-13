@@ -180,3 +180,25 @@ def plot_spring_block():
 
         plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()
+    
+def plot_random_walker():
+    data = pd.read_csv('data.txt', delimiter=' ').to_numpy().T
+    frames=data[0]-1
+    x=data[1]
+    y=data[2]
+    x_min=np.min(x)
+    x_max=np.max(x)
+    y_min=np.min(y)
+    y_max=np.max(y)
+    for frame in frames:
+        fig=plt.figure(figsize=(25,20),facecolor='white')
+        plt.plot(x[:int(frame)+1],y[:int(frame)+1],'--k')
+        plt.scatter(x[int(frame)],y[int(frame)],color='red',edgecolors='black',s=200)
+        plt.scatter(x[0],y[0],color='green',edgecolors='black',s=200)
+        plt.title(f"Step={int(frame)}",fontsize=30)
+        plt.xlim((x_min-1,x_max+1))
+        plt.ylim((y_min-1,y_max+1))
+        plt.tight_layout()
+
+        plt.savefig("{:05d}.jpg".format(int(frame)),dpi=50)
+        plt.close()

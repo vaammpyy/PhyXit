@@ -1,6 +1,7 @@
 #def euler(x,dt):
 
 import numpy as np
+from random import choice
 
 def projectile(v,theta,h,dt,t_end):
     x=0
@@ -68,4 +69,17 @@ def spring_block(m,ks,x0,x,vx,mu,dt,t_end):
         p=0.5*ks*(x0-x)**2
         i+=1
         t+=dt
+    fle.close()
+
+def random_walker(n,a):
+    x=0
+    y=0
+    steps=0
+    r=np.linspace(-1,1,1000)
+    fle= open("data.txt","w+")
+    while (steps<n):
+        fle.write(f"{steps} {x} {y}\n")
+        x+=choice(r)*a
+        y+=choice(r)*a
+        steps+=1
     fle.close()

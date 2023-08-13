@@ -18,3 +18,11 @@ def spring_block_motion(m, ks, x0, x, vx, mu, dt, t_end):
     spring_block(m, ks, x0, x, vx, mu, dt, t_end)
     plot_spring_block()
     make_movie()
+
+
+def random_walker_motion(n,a):
+    random_walker(n,a)
+    plot_random_walker()
+    make_movie()
+
+random_walker_motion(100,0.1)
