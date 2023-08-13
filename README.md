@@ -17,7 +17,6 @@ Connect with Professors: Need guidance or assistance? PhyXit has got you covered
 
 Get ready to embark on a journey through the wonders of physics with PhyXit as your trusty companion. Empower your learning, research, and connections in the world of physics like never before. Let PhyXit be your bridge to understanding the universe's most intriguing phenomena.
 
----
 
 # Simulation quick start guide
 
@@ -28,7 +27,6 @@ Get ready to embark on a journey through the wonders of physics with PhyXit as y
     4) Diffusion: `@PhyXit sim diffusion 30 50 0.1`
     5) Charge particle interaction: `@PhyXit sim charged_int 2 -1 2 1 -1 0 1 0 0 0.1 5`
 
----
 # Usage
 
 ## Simulations
@@ -64,7 +62,6 @@ PhyXit can also fetch results from [arxiv](https://arxiv.org/) and [wikipedia](h
 PhyXit can also display a professor's google scholar profile.
 `@PhyXit profs name <Name>`
 
----
 # How you can contribute?
 
 
