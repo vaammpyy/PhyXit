@@ -1,5 +1,5 @@
 # PhyXit
-![logo](logo.jpg)
+![logo](./figures/logo.jpg)
 1) Bot intro 
 2) invite link
 3) description
@@ -65,4 +65,5 @@ PhyXit can also display a professor's google scholar profile.
 
 # How you can contribute?
 
+All our solver codes are present in the 
 
