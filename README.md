@@ -1,11 +1,12 @@
 # PhyXit
 ![logo](./figures/logo.jpg)
-Meet **PhyXit**: The Discord bot for physics enthusiasts. Simulate physical systems, fetch ArXiv papers, summarize wikipedia articles and get professor's google scholar profile with ease. [Invite](https://discord.com/api/oauth2/authorize?client_id=1139830899685474395&permissions=108544&scope=bot%20applications.commands) PhyXit and elevate your physics discussions and research endeavors today! 
+
+Meet **PhyXit**: The Discord bot for physics enthusiasts. Simulate physical systems, fetch ArXiv papers, summarize wikipedia articles and get professor's google scholar profile with ease. [Invite](https://discord.com/api/oauth2/authorize?client_id=1139830899685474395&permissions=108544&scope=bot%20applications.commands) PhyXit to your discord server and elevate your physics discussions and research endeavors today! 
 
 
 # Simulation quick start guide
 
-**NOTE**: Tag PhyXit in the discord server to give commands.
+**NOTE**: Tag PhyXit explicitly in the discord server to give commands.
 
 * To run a quick simulation use the following commands:
     1) Projectile : `@PhyXit sim projectile 10 45 5 0.1 5` 
@@ -31,7 +32,7 @@ For details regarding the initial conditions of the simulations use.
 
 `@PhyXit sim -h`
 
-## Arxiv and Wikipedia
+## ArXiv and Wikipedia
 
 PhyXit can also fetch results from [arxiv](https://arxiv.org/) and [wikipedia](https://www.wikipedia.org/).
 
