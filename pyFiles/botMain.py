@@ -36,7 +36,7 @@ def run_discordbot():
         username = str(message.author)
         user_message = str(message.content).split()
         channel = str(message.channel)
-        
+        print(message.mentions)
         print(f"{username} said {user_message} on {channel}")
         print(f"{message.content}")
         if (user_message[0] == '<@1139830899685474395>' or user_message[0] == '<@&1140177528657551383>'):
