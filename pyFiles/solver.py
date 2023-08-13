@@ -59,7 +59,7 @@ def spring_block(m,ks,x0,x,vx,mu,dt,t_end):
     k=0.5*m*vx**2
     p=0.5*k*(x0-x)**2
     y=0
-    fle= open("/tmp/data.txt","w+")
+    fle= open("./tmp/data.txt","w+")
     while (t<t_end):
         fle.write(f"{i} {t} {x0} {x} {y} {vx} {k} {p}\n")
         x+=vx*dt

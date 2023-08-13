@@ -2,4 +2,4 @@ I can simulate the following:
 1) Projectile: `@SimIt sim projectile <Speed> <Angle> <height> <time-step> <duration>`
 2) Pendulum: `@SimIt sim pendulum <mass> <length> <theta> <omega> <drag-coeff> <time-step> <duration>`
 3) Spring-Mass: `@SimIt sim spring <mass> <SpringConst> <MeanPos> <I-Pos> <I-Velocity> <FrictionCoeff> <time-step> <duration>`
-4) Random-Walk: `@SimIt sim rand_walk <#Particles> <#Steps> <DiffusionRate>
+4) Random-Walk: `@SimIt sim rand_walk <#Particles> <#Steps> <DiffusionRate>`

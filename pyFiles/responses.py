@@ -25,11 +25,11 @@ def handle_response(message) -> str:
         return ['Hey there! \n>>> \n2 \n3 \n4 \n5', 't']
     if p_message[0] == 'img':
 
-        return [['movie.mp4', '38891d63301e957da6fc19b732a09caf.jpg'], 'm']
+        return [['./tmp/movie.mp4', '38891d63301e957da6fc19b732a09caf.jpg'], 'm']
 
     if p_message[0] == 'sim':
         try:
-            os.remove('movie.mp4')
+            os.remove('./tmp/movie.mp4')
         except:
             pass
         vec(p_message[2:])
@@ -45,12 +45,12 @@ def handle_response(message) -> str:
             random_walker_motion(*data_vec)
         else:
             return ["\n>>> "+sim_h, 't']
-        return [['movie.mp4'], 'm']
+        return [['./tmp/movie.mp4'], 'm']
 
     if p_message[0] == 'arxiv':
         try:
-            os.remove('papers.log')
-            os.remove('paper.pdf')
+            os.remove('./tmp/papers.log')
+            os.remove('./tmp/paper.pdf')
         except:
             pass
 
@@ -60,23 +60,23 @@ def handle_response(message) -> str:
         if p_message[1] == 'top':
             query = ' '.join(p_message[2:])
             getList(query)
-            paper = open('papers.log', mode='r')
+            paper = open('./tmp/papers.log', mode='r')
             lines = paper.read()
             return [f"Top 10 papers related to **{query}**\n>>> "+lines, 't']
 
         if p_message[1] == 'fetch':
             fetchPaper(p_message[2])
-            paper = open('papers.log', mode='r')
+            paper = open('./tmp/papers.log', mode='r')
             lines = paper.read()
 
-            return [[f"Details of paper: **{p_message[2]}**\n>>> "+lines, "paper.pdf"], 'm']
+            return [[f"Details of paper: **{p_message[2]}**\n>>> "+lines, "./tmp/paper.pdf"], 'm']
 
         return ["\n>>> "+arxiv_h, 't']
 
     if p_message[0] == 'profs' or p_message[0] == 'prof':
         try:
-            os.remove('prof.log')
-            os.remove('prof.jpg')
+            os.remove('./tmp/prof.log')
+            os.remove('./tmp/prof.jpg')
         except:
             pass
 
@@ -84,10 +84,10 @@ def handle_response(message) -> str:
             name = ' '.join(p_message[2:])
             knowProf(name)
 
-            paper = open('prof.log', mode='r')
+            paper = open('./tmp/prof.log', mode='r')
             lines = paper.read()
 
-            return [["prof.jpg", f"\n>>> {lines}"], 'm']
+            return [["./tmp/prof.jpg", f"\n>>> {lines}"], 'm']
         return ["\n>>> "+prof_h, 't']
 
     return ["\n>>> "+Help, 't']

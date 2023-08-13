@@ -9,7 +9,7 @@ def make_movie():
     os.system("rm -r ./tmp/*.jpg")
 
 def plot_projectile():
-    data = pd.read_csv('data.txt', delimiter=' ').to_numpy().T
+    data = pd.read_csv('./tmp/data.txt', delimiter=' ').to_numpy().T
     frames=data[0]-1
     t=data[1]
     x=data[2]
@@ -121,7 +121,7 @@ def plot_simple_pendulum():
         plt.close()
 
 def plot_spring_block():
-    data = pd.read_csv('data.txt', delimiter=' ').to_numpy().T
+    data = pd.read_csv('./tmp/data.txt', delimiter=' ').to_numpy().T
     frames=data[0]-1
     t=data[1]
     x0=data[2]
@@ -182,7 +182,7 @@ def plot_spring_block():
         plt.close()
     
 def plot_random_walker():
-    data=np.load("./data.npy",allow_pickle=True).item()
+    data=np.load("./tmp/data.npy",allow_pickle=True).item()
     frames=data['frame']
     x_min=np.min(np.ndarray.flatten(np.array(data['x'])))-1
     x_max=np.max(np.ndarray.flatten(np.array(data['x'])))+1
