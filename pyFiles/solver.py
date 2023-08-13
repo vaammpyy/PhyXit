@@ -93,4 +93,6 @@ def random_walker(n,steps,a):
     np.save("./data.npy",dictionary)
 
 def charge_interaction(d,q1,q2,mp,qp,xp,yp,vxp,vyp,dt,t_end):
-    print("hey")
+    q1_x=-d/2
+    q1_x=-d/2
+    q1_x=-d/2

@@ -30,7 +30,7 @@ def plot_projectile():
         ax5 = fig.add_subplot(gs[0, :])
 
         ax5.scatter(x[int(frame)],y[int(frame)],color='red',edgecolors='black',s=200)
-        ax5.plot(x[:int(frame)],y[:int(frame)],'--k')
+        ax5.plot(x[:int(frame)+1],y[:int(frame)+1],'--k')
         ax5.set_xlabel("X-axis",fontsize=24)
         ax5.set_ylabel("Y-axis",fontsize=24)
 
@@ -85,7 +85,7 @@ def plot_simple_pendulum():
         ax6 = fig.add_subplot(gs[2,1])
 
         ax1.scatter(x[int(frame)],y[int(frame)],color='red',edgecolors='black',s=200)
-        ax1.plot(x[:int(frame)],y[:int(frame)],'--k')
+        ax1.plot(x[:int(frame)+1],y[:int(frame)+1],'--k')
         ax1.plot([0,x[int(frame)]],[0,y[int(frame)]],'blue')
         ax1.set_xlabel("X-axis",fontsize=24)
         ax1.set_ylabel("Y-axis",fontsize=24)
