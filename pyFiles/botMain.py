@@ -39,7 +39,7 @@ def run_discordbot():
 
         print(f"{username} said {user_message} on {channel}")
         print(f"{message.content}")
-        if (user_message[0] == '<@1139830899685474395>'):
+        if (user_message[0] == '<@1139830899685474395>' or user_message[0] == '<@&1140177528657551383>'):
             if user_message[1][0] == '$':
                 user_message = user_message[1:]
                 await send_message(message, user_message[1:], is_private=True)
