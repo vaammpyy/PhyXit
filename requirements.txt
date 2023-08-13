@@ -5,7 +5,7 @@ attrs==23.1.0
 charset-normalizer==3.2.0
 contourpy==1.1.0
 cycler==0.11.0
-discord.py==2.3.2
+discord.py==1.7.3
 fonttools==4.42.0
 frozenlist==1.4.0
 idna==3.4
@@ -23,3 +23,6 @@ scipy==1.11.1
 six==1.16.0
 tzdata==2023.3
 yarl==1.9.2
+Wikipedia-API==0.6.0
+scholarly==1.7.11
+arxiv==1.4.8
