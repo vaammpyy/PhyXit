@@ -205,8 +205,8 @@ def plot_random_walker():
             ax1.set_ylabel("Y-axis",fontsize=24)
 
             ax2.hist(np.sqrt(x_all**2+y_all**2),alpha=0.5,color='red')
-            ax2.set_ylim([0,n/4])
-            ax2.set_xlim([0,np.sqrt(n)/2])
+            ax2.set_ylim([0,np.sqrt(n)])
+            ax2.set_xlim([0,np.sqrt(n)])
             ax2.set_xlabel("Radial distance",fontsize=24)
             ax2.set_ylabel("# particles",fontsize=24)
             #plt.scatter(x[0],y[0],color='green',edgecolors='black',s=200)
