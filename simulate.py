@@ -24,5 +24,3 @@ def random_walker_motion(n,steps,a):
     random_walker(n,steps,a)
     plot_random_walker()
     make_movie()
-
-random_walker_motion(50,20,0.1)
