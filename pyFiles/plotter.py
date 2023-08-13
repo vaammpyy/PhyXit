@@ -59,7 +59,6 @@ def plot_projectile():
         plt.savefig("./tmp/{:05d}.jpg".format(int(frame)),dpi=50)
         plt.close()
 
-
 def plot_simple_pendulum():
     data = pd.read_csv('./tmp/./tmp/data.txt', delimiter=' ').to_numpy().T
     # print(data[0])

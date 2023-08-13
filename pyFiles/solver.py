@@ -137,5 +137,3 @@ def charge_interaction(d,q1,q2,mp,qp,xp,yp,vxp,vyp,dt,t_end):
         i+=1
         t+=dt
     fle.close()
-
-
