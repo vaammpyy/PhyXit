@@ -79,7 +79,8 @@ def handle_response(message) -> str:
             query = ' '.join(p_message[2:])
             getSummary(query)
             paper = open('./tmp/papers.log', mode='r')
-            return [[f"Summary of the Article on wikipedia:\n>>>"], 'm']
+            lines = paper.read()
+            return [[f"Summary of the Article on wikipedia:\n>>> {lines}"], 'm']
         return ["\n>>> "+arxiv_h, 't']
 
     if p_message[0] == 'profs' or p_message[0] == 'prof':
