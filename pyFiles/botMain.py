@@ -1,5 +1,5 @@
 import discord
-import responses as responses
+import pyFiles.responses as responses
 from discord.ext import commands
 
 

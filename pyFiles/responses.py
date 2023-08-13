@@ -1,13 +1,13 @@
 import discord
 import os
-from simulate import *
-from papers import *
-from prof import *
+from pyFiles.simulate import *
+from pyFiles.papers import *
+from pyFiles.prof import *
 
-help = open('../helpDesk/main.txt', mode='r').read()
-sim_h = open('../helpDesk/sim_h.txt', mode='r').read()
-arxiv_h = open('../helpDesk/arxiv_h.txt', mode='r').read()
-prof_h = open('../helpDesk/prof_h.txt', mode='r').read()
+Help = open('./helpDesk/main.txt', mode='r').read()
+sim_h = open('./helpDesk/sim_h.txt', mode='r').read()
+arxiv_h = open('./helpDesk/arxiv_h.txt', mode='r').read()
+prof_h = open('./helpDesk/prof_h.txt', mode='r').read()
 data_vec = 0
 
 
@@ -90,4 +90,4 @@ def handle_response(message) -> str:
             return [["prof.jpg", f"\n>>> {lines}"], 'm']
         return ["\n>>> "+prof_h, 't']
 
-    return ["\n>>> "+help, 't']
+    return ["\n>>> "+Help, 't']
