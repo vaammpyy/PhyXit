@@ -4,10 +4,10 @@ from simulate import *
 from papers import *
 from prof import *
 
-f = open('main.txt', mode='r')
-help = f.read()
-sim_h = open('sim_h.txt', mode='r').read()
-arxiv_h = open('arxiv_h.txt', mode='r').read()
+help = open('../helpDesk/main.txt', mode='r').read()
+sim_h = open('../helpDesk/sim_h.txt', mode='r').read()
+arxiv_h = open('../helpDesk/arxiv_h.txt', mode='r').read()
+prof_h = open('../helpDesk/prof_h.txt', mode='r').read()
 data_vec = 0
 
 
@@ -88,5 +88,6 @@ def handle_response(message) -> str:
             lines = paper.read()
 
             return [["prof.jpg", f"\n>>> {lines}"], 'm']
+        return ["\n>>> "+prof_h, 't']
 
     return ["\n>>> "+help, 't']
