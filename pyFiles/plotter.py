@@ -200,15 +200,15 @@ def plot_random_walker():
         ax2 = fig.add_subplot(gs[1,0])
         ax1.set_xlim([x_min,x_max])
         ax1.set_ylim([y_min,y_max])
-        n=len(x_all)
+        n=np.sqrt(x_max**2+y_max**2)
         for i in range(n):
             ax1.scatter(x_all[i],y_all[i],color='red',edgecolors='black',s=200)
             ax1.set_xlabel("X-axis",fontsize=24)
             ax1.set_ylabel("Y-axis",fontsize=24)
 
             ax2.hist(np.sqrt(x_all**2+y_all**2),alpha=0.5,color='red')
-            ax2.set_ylim([0,np.sqrt(n)])
-            ax2.set_xlim([0,np.sqrt(n)])
+            ax2.set_ylim([0,n])
+            ax2.set_xlim([0,n])
             ax2.set_xlabel("Radial distance",fontsize=24)
             ax2.set_ylabel("# particles",fontsize=24)
             #plt.scatter(x[0],y[0],color='green',edgecolors='black',s=200)
