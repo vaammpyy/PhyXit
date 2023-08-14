@@ -20,10 +20,9 @@ def projectile(v,theta,h,dt,t_end):
         y+=vy*dt
         vx+=ax*dt
         vy+=ay*dt
-        if y<0:
+        if y<0.001:
             y=0
-            vy=0
-            ay=0
+            vy=-0.7*vy
         i+=1
         t+=dt
     fle.close()

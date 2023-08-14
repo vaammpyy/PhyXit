@@ -31,8 +31,8 @@ def plot_projectile():
 
         ax5.scatter(x[int(frame)],y[int(frame)],color='red',edgecolors='black',s=200)
         ax5.plot(x[:int(frame)+1],y[:int(frame)+1],'--k')
-        ax5.set_xlim([np.min(x)-1,np.max(x)+1])
-        ax5.set_ylim([np.min(y)-1,np.max(y)+1])
+        ax5.set_xlim([-0.01,np.max(x)+1])
+        ax5.set_ylim([-0.01,np.max(y)+1])
         ax5.set_xlabel("X-axis",fontsize=24)
         ax5.set_ylabel("Y-axis",fontsize=24)
 
