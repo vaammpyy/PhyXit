@@ -4,3 +4,4 @@ TOKEN
 __pycache__
 Dockerfile
 .dockerignore
+tmp
