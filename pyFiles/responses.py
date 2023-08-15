@@ -22,6 +22,12 @@ def vec(arr):
 
 
 def handle_response(message) -> str:
+       
+    try:
+        os.mkdir("./tmp")
+    except:
+        pass
+    
     p_message = ' '.join(message).lower().split()
     if p_message[0] == 'hello':
         return ['Hey there! \n>>> \n2 \n3 \n4 \n5', 't']
