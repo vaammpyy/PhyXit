@@ -6,3 +6,4 @@ Dockerfile
 .dockerignore
 tmp
 *.tar
+.env
