@@ -62,7 +62,7 @@ def plot_projectile():
         plt.close()
 
 def plot_simple_pendulum():
-    data = pd.read_csv('./tmp/./tmp/data.txt', delimiter=' ').to_numpy().T
+    data = pd.read_csv('./tmp/data.txt', delimiter=' ').to_numpy().T
     # print(data[0])
     frames=data[0]-1
     t=data[1]
