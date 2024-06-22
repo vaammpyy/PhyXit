@@ -1,3 +1,4 @@
+## Bot is not currently hosted, we are not maintaining the project in the near future.
 # PhyXit
 ![logo](./figures/logo.jpg)
 
